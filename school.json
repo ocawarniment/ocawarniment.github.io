@@ -9,7 +9,7 @@
         "gapDate": "OCA_LastDayWUnapprovedAttend",
         "totalApproved": "OCA_Truancy2021_ActualAttHrs_History",
         "totalRequired": "OCA_Truancy2021_ReqInstrucHrs",
-        "lessonsBehind": "EF_NumberLessonsBehind",
+        "lessonsBehind": "Student_ID", //"EF_NumberLessonsBehind",
         "attendanceMetric": "EF_AttendanceMetric",
         "firstDay": "EF_EnrollmentDate",
         "cteStudent": "EnrolledinCTECourse_2021",
