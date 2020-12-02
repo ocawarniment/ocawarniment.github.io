@@ -14,8 +14,8 @@
         "firstDay": "EF_EnrollmentDate",
         "cteStudent": "EnrolledinCTECourse_2021",
         "ccpStudent": "EnrolledInCollege_2021",
-        "cteHours": "Ohio_Truancy2021_CTECATHrsDay",
-        "ccpHours": "Ohio_Truancy2021_CCPCATHrsDay",
+        "cteHours": "OCA_Truancy2021_CTEYTDHours",
+        "ccpHours": "OCA_Truancy2021_CCPYTDHours",
         "stateId": "Student_ID"
       },
       "work": {
