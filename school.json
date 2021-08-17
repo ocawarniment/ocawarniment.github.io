@@ -19,7 +19,7 @@
         "stateId": "Student_ID"
       },
       "truancyDataView": {
-        "id": "14661",
+        "id": "15492",
         "studentMetrics": {
             "lastLogin": {"name":"Last Login", "domSelector":"#EF_LastLogin"},
             "lastContact": {"name":"Last Contact", "domSelector":"#EF_StudentLastSynchronousContact"},
@@ -41,10 +41,12 @@
         "dataViewID": "#####"
       },
       "popupDisplay": [
-        {"field":"lastLogin", "displayName": "Last Login", "default": true},
-        {"field":"lastContact", "displayName": "Last Contact", "default": true},
-        {"field":"attendanceMetric", "displayName":"Attendance Metric", "default": true},
-        {"field":"attendanceStatus", "displayName":"Attendance Status", "default": true},
+        {"field":"id", "displayName":"ID", "default": true},
+        {"field":"name", "displayName": "Student", "default": true},
+        {"field":"lastLogin", "displayName": "Last Login", "default": false},
+        {"field":"lastContact", "displayName": "Last Contact", "default": false},
+        {"field":"attendanceMetric", "displayName":"Attendance Metric", "default": false},
+        {"field":"attendanceStatus", "displayName":"Attendance Status", "default": false},
         {"field":"ccpHours", "displayName":"CCP Req Hrs/Day", "default": false},
         {"field":"ccpStudent", "displayName":"CCP Student?", "default": false},
         {"field":"cteHours", "displayName":"CTE Req Hrs/Day", "default": false},
@@ -52,9 +54,7 @@
         {"field":"escReason", "displayName":"Escelation Reason", "default": false},
         {"field":"escelation", "displayName":"Escelation Status", "default": false},
         {"field":"firstDay", "displayName":"First Day", "default": false},
-        {"field":"gapDate", "displayName":"Attendance Gap Date", "default": true},
-        {"field":"lastContact", "displayName":"Last Sync. Contact", "default": false},
-        {"field":"lastLogin", "displayName":"Last Login", "default": false},
+        {"field":"gapDate", "displayName":"Attendance Gap Date", "default": false},
         {"field":"lessonBehind", "displayName":"Lessons Behind", "default": false},
         {"field":"missingHours", "displayName":"Missing Hours YTD", "default": false},
         {"field":"stateId", "displayName":"State ID", "default": false},
