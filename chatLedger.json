@@ -23,31 +23,6 @@
             "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"}
         }
       },
-      "popupDisplay": [
-        {"field":"id", "displayName":"ID", "default": true},
-        {"field":"name", "displayName": "Student", "default": true},
-        {"field":"approveButton", "displayName": "Attendance", "default": true},
-        {"field":"lastLogin", "displayName": "Last Login", "default": true},
-        {"field":"lastContact", "displayName": "Last Contact", "default": true},
-        {"field":"attendanceMetric", "displayName":"Attendance Metric", "default": true},
-        {"field":"attendanceStatus", "displayName":"Attendance Status", "default": true},
-        {"field":"ccpHours", "displayName":"CCP Req Hrs/Day", "default": false},
-        {"field":"ccpStudent", "displayName":"CCP Student?", "default": false},
-        {"field":"cteHours", "displayName":"CTE Req Hrs/Day", "default": false},
-        {"field":"cteStudent", "displayName":"CTE Student?", "default": false},
-        {"field":"escReason", "displayName":"Escelation Reason", "default": false},
-        {"field":"escelation", "displayName":"Escelation Status", "default": false},
-        {"field":"firstDay", "displayName":"First Day", "default": false},
-        {"field":"gapDate", "displayName":"Attendance Gap Date", "default": true},
-        {"field":"lastContact", "displayName":"Last Sync. Contact", "default": false},
-        {"field":"lastLogin", "displayName":"Last Login", "default": false},
-        {"field":"lessonsBehind", "displayName":"Lessons Behind", "default": false},
-        {"field":"netHours", "displayName":"Missing Hours YTD", "default": false},
-        {"field":"stateId", "displayName":"State ID", "default": false},
-        {"field":"totalApproved", "displayName":"Approved Hours YTD", "default": false},
-        {"field":"totalRequired", "displayName":"Required Hours YTD", "default": false},
-        {"field":"lessonTimeAlignment", "displayName":"Alignment", "default": false}
-      ],
       "attenAlg": [
           {"conditions": [ 
               {"variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
@@ -100,31 +75,6 @@
             "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"}
         }
       },
-      "popupDisplay": [
-        {"field":"id", "displayName":"ID", "default": true},
-        {"field":"name", "displayName": "Student", "default": true},
-        {"field":"approveButton", "displayName": "Attendance", "default": true},
-        {"field":"lastLogin", "displayName": "Last Login", "default": true},
-        {"field":"lastContact", "displayName": "Last Contact", "default": true},
-        {"field":"attendanceMetric", "displayName":"Attendance Metric", "default": true},
-        {"field":"attendanceStatus", "displayName":"Attendance Status", "default": true},
-        {"field":"ccpHours", "displayName":"CCP Req Hrs/Day", "default": false},
-        {"field":"ccpStudent", "displayName":"CCP Student?", "default": false},
-        {"field":"cteHours", "displayName":"CTE Req Hrs/Day", "default": false},
-        {"field":"cteStudent", "displayName":"CTE Student?", "default": false},
-        {"field":"escReason", "displayName":"Escelation Reason", "default": false},
-        {"field":"escelation", "displayName":"Escelation Status", "default": false},
-        {"field":"firstDay", "displayName":"First Day", "default": false},
-        {"field":"gapDate", "displayName":"Attendance Gap Date", "default": true},
-        {"field":"lastContact", "displayName":"Last Sync. Contact", "default": false},
-        {"field":"lastLogin", "displayName":"Last Login", "default": false},
-        {"field":"lessonsBehind", "displayName":"Lessons Behind", "default": false},
-        {"field":"netHours", "displayName":"Missing Hours YTD", "default": false},
-        {"field":"stateId", "displayName":"State ID", "default": false},
-        {"field":"totalApproved", "displayName":"Approved Hours YTD", "default": false},
-        {"field":"totalRequired", "displayName":"Required Hours YTD", "default": false},
-        {"field":"lessonTimeAlignment", "displayName":"Alignment", "default": false}
-      ],
       "attenAlg": [
           {"conditions": [ 
               {"variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
