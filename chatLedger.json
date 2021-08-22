@@ -5,7 +5,7 @@
   "oca": {
       "name":"oca", 
       "truancyDataView": {
-        "id": "14661",
+        "id": "15492",
         "measures": {
             "lastLogin": {"name":"Last Login", "domSelector":"#EF_LastLogin"},
             "lastContact": {"name":"Last Contact", "domSelector":"#EF_StudentLastSynchronousContact"},
