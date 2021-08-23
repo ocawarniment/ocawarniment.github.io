@@ -1,5 +1,5 @@
 {
-  "version": "1.0.8",
+  "version": "1.0.9",
   "update-date": "08-22-2021",
   "cryptoPass": "oca2018",
   "oca": {
@@ -128,6 +128,10 @@
       {"field":"totalApproved", "displayName":"Approved Hours YTD", "default": false},
       {"field":"totalRequired", "displayName":"Required Hours YTD", "default": false},
       {"field":"lessonTimeAlignment", "displayName":"Alignment", "default": false}
+    ],
+    "studentLinks": [
+        {"title": "Gradebook", "href": "https://www.connexus.com/gradeBook/default.aspx?idWebuser={{id}}"},
+        {"title": "User Overview", "href": "https://www.connexus.com/webuser/overview.aspx?idWebuser={{id}}"}
     ]
   }
   
