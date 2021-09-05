@@ -1,5 +1,5 @@
 {
-  "version": "1.0.14",
+  "version": "1.0.15",
   "update-date": "09-05-2021",
   "cryptoPass": "oca2018",
   "oca": {
@@ -9,17 +9,17 @@
         "measures": {
             "lastLogin": {"name":"Last Login", "domSelector":"#EF_LastLogin"},
             "lastContact": {"name":"Last Contact", "domSelector":"#EF_StudentLastSynchronousContact"},
-            "netHours": {"name":"Hours Missed Year to Date", "domSelector":"#OCA_Truancy2122_HrsMissedYTD", "defaultValue":0},
+            "netHours": {"name":"Hours Missed Year to Date", "domSelector":"#OCA_Truancy2122_HrsMissedYTD", "defaultValue":0, "type": "number"},
             "gapDate": {"name":"Last Day with Approved Attendance", "domSelector":"#OCA_LastDayWUnapprovedAttend"},
-            "totalApproved": {"name":"Actual Attendance Hours", "domSelector":"#OCA_Truancy2122_ActualAttHrs"},
-            "totalRequired": {"name":"Required Attendance Hours", "domSelector": "#OCA_Truancy2122_ReqInstrucHrs"},
-            "lessonsBehind": {"name":"Lessons Behind", "domSelector":"#EF_NumberLessonsBehind", "defaultValue":0},
-            "attendanceMetric": {"name":"Attendance Metric", "domSelector":"#EF_AttendanceMetric"},
+            "totalApproved": {"name":"Actual Attendance Hours", "domSelector":"#OCA_Truancy2122_ActualAttHrs", "type": "number"},
+            "totalRequired": {"name":"Required Attendance Hours", "domSelector": "#OCA_Truancy2122_ReqInstrucHrs", "type": "number"},
+            "lessonsBehind": {"name":"Lessons Behind", "domSelector":"#EF_NumberLessonsBehind", "defaultValue":0, "type": "number"},
+            "attendanceMetric": {"name":"Attendance Metric", "domSelector":"#EF_AttendanceMetric", "type": "number"},
             "firstDay": {"name":"Enrollment Date", "domSelector":"#EF_EnrollmentDate"},
             "cteStudent": {"name": "Enrolled in CTE", "domSelector":"#EnrolledinCTECourse_2122"},
             "ccpStudent": {"name": "Enrolled in CCP", "domSelector":"#EnrolledInCollege_2122"},
-            "cteHours": {"name": "CTE Hours Per Day", "domSelector":"#Ohio_Truancy2122_CTECATHrsDay"},
-            "ccpHours": {"name": "CCP Hours Per Day", "domSelector":"#Ohio_Truancy2122_CCPCATHrsDay"},
+            "cteHours": {"name": "CTE Hours Per Day", "domSelector":"#Ohio_Truancy2122_CTECATHrsDay", "type": "number"},
+            "ccpHours": {"name": "CCP Hours Per Day", "domSelector":"#Ohio_Truancy2122_CCPCATHrsDay", "type": "number"},
             "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"}
         }
       },
