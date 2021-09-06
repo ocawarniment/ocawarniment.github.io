@@ -1,5 +1,5 @@
 {
-    "version": "1.0.36",
+    "version": "1.0.38",
     "update-date": "09-06-2021",
     "cryptoPass": "oca2018",
     "oca": {
@@ -123,7 +123,7 @@
       {"field":"netHours", "displayName":"Hours Over/Under", "default": false},
       {"field":"lessonsBehind", "displayName":"Lessons Behind", "default": false},
       {"field":"lastLogin", "displayName": "Last Login", "default": true},
-      {"field":"gapDate", "displayName":"Attendance Gap Date", "default": true},
+      {"field":"gapDate", "displayName":"Last Approval", "default": true},
       {"field":"lastContact", "displayName": "Last Sync Contact", "default": true},
       {"field":"attendanceMetric", "displayName":"Attendance Metric", "default": true},
       {"field":"attendanceStatus", "displayName":"Attendance Status", "default": true},
