@@ -23,7 +23,7 @@
             "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"}
         },
         "metrics": {
-            "netHours": {"measureOne": "totalApproved", "measureTwo": "totalRequired", "operation": "substract"}
+            "netHours": {"measureOne": "totalApproved", "measureTwo": "totalRequired", "operation": "subtract"}
         }
       },
       "attenAlg": [
