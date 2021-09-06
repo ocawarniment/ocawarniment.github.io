@@ -23,7 +23,7 @@
             "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"}
         },
         "metrics": {
-            "lessonTimeAlignment": {"measureOne": "lessonsBehind", "measureTwo": "netHours", "operation": "subtract"},
+            "lessonTimeAlignment": {"measureOne": "lessonsBehind", "measureTwo": "hoursMissing", "operation": "subtract"},
             "netHours": {"measureOne": "totalApproved", "measureTwo": "totalRequired", "operation": "subtract"}
         }
       },
