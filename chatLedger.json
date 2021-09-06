@@ -113,7 +113,7 @@
       {"field":"id", "displayName":"ID", "default": true},
       {"field":"name", "displayName": "Student", "default": true},
       {"field":"approveButton", "displayName": "Attendance", "default": true},
-      {"field":"missingHours", "displayName":"Missing Hours YTD", "default": false},
+      {"field":"netHours", "displayName":"Hrs Over/Under YTD", "default": false},
       {"field":"lessonsBehind", "displayName":"Lessons Behind", "default": false},
       {"field":"lastLogin", "displayName": "Last Login", "default": true},
       {"field":"gapDate", "displayName":"Attendance Gap Date", "default": true},
@@ -126,6 +126,7 @@
       {"field":"escelation", "displayName":"Escelation Status", "default": false},
       {"field":"firstDay", "displayName":"First Day", "default": false},
       {"field":"stateId", "displayName":"State ID", "default": false},
+      {"field":"missingHours", "displayName":"Missing Hours YTD", "default": false},
       {"field":"totalApproved", "displayName":"Approved Hours YTD", "default": false},
       {"field":"totalRequired", "displayName":"Required Hours YTD", "default": false},
       {"field":"lessonTimeAlignment", "displayName":"Alignment", "default": false}
