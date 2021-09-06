@@ -88,7 +88,7 @@
             {"variable":"lessonsBehind","operator":"less-than","value":20} 
         ], "result": {"state": "approve", "color":"#4caf50", "suggestion": "The student is engaged which should be reflected in attendance.", "summary": ""}},
         {"conditions": [ 
-            {"variable":"escelationReason","operator":"equal-to","value":"Contacts (Approaching Alarm),"}, 
+            {"variable":"escelationReason","operator":"equal-to","value":"Contacts (AA),"}, 
             {"variable":"lessonsBehind","operator":"less-than","value":20} 
         ], "result": {"state": "approve", "color":"#4caf50", "suggestion": "The student is engaged which should be reflected in attendance.", "summary": ""}},
         {"conditions": [ 
@@ -97,12 +97,12 @@
             {"variable":"lessonsBehind","operator":"less-than","value":40} 
         ], "result": {"state": "review", "color":"#ffeb3b", "suggestion": "Teacher review is required to determine engagement and ensure attendance aligns appropriately.", "summary": ""}},
         {"conditions": [ 
-            {"variable":"escelationReason","operator":"contains","value":"(Approaching Alarm)"}, 
+            {"variable":"escelationReason","operator":"contains","value":"(AA)"}, 
             {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":20}, 
             {"variable":"lessonsBehind","operator":"less-than","value":40} 
         ], "result": {"state": "review", "color":"#ffeb3b", "suggestion": "Teacher review is required to determine engagement and ensure attendance aligns appropriately.", "summary": ""}},
         {"conditions": [ 
-            {"variable":"escelationReason","operator":"contains","value":"(Approaching Alarm)"}, 
+            {"variable":"escelationReason","operator":"contains","value":"(AA)"}, 
             {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":40}
         ], "result": {"state": "adjust", "color":"#f44336", "suggestion": "The student is not engaged and attendance should be adjusted appropriately.", "summary": ""}},
         {"conditions": [ 
