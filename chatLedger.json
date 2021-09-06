@@ -1,5 +1,5 @@
 {
-  "version": "1.0.23",
+  "version": "1.0.24",
   "update-date": "09-05-2021",
   "cryptoPass": "oca2018",
   "oca": {
@@ -23,7 +23,7 @@
             "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"}
         },
         "metrics": {
-            "lessonTimeAlignment": {"measureOne": "lessonsBehind", "measureTwo": "hoursMissing", "operation": "subtract"},
+            "lessonTimeAlignment": {"measureOne": "lessonsBehind", "measureTwo": "missingHours", "operation": "subtract"},
             "netHours": {"measureOne": "totalApproved", "measureTwo": "totalRequired", "operation": "subtract"}
         }
       },
