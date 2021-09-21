@@ -76,7 +76,8 @@
             "firstDay": {"name":"Enrollment Date", "domSelector":"#EF_EnrollmentDate"},
             "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"},
             "escelationStatus": {"name":"Esc. Status", "domSelector":"#EF_AttendanceStatusAutomated"},
-            "escelationReason": {"name": "Esc. Reason", "domSelector":"#EF_WhyEscalated", "defaultValue": "None"}
+            "escelationReason": {"name": "Esc. Reason", "domSelector":"#EF_WhyEscalated", "defaultValue": "None"},
+            "enrollmentStage": {"name": "Enrollment Stage", "domSelector":"#EF_StudentStageAutomated"}
         },
         "metrics": {
             "lessonTimeAlignment": {"measureOne": "lessonsBehind", "measureTwo": "missingHours", "operation": "subtract"},
