@@ -1,6 +1,6 @@
 {
-    "version": "1.0.40",
-    "update-date": "09-06-2021",
+    "version": "1.1.0",
+    "update-date": "09-21-2021",
     "cryptoPass": "oca2018",
     "oca": {
       "name":"oca", 
@@ -20,7 +20,8 @@
             "ccpStudent": {"name": "Enrolled in CCP", "domSelector":"#EnrolledInCollege_2122"},
             "cteHours": {"name": "CTE Hours Per Day", "domSelector":"#Ohio_Truancy2122_CTECATHrsDay", "type": "number"},
             "ccpHours": {"name": "CCP Hours Per Day", "domSelector":"#Ohio_Truancy2122_CCPCATHrsDay", "type": "number"},
-            "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"}
+            "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"},
+            "enrollmentStage": {"name": "Enrollment Stage", "domSelector":"#EF_StudentStageAutomated"}
         },
         "metrics": {
             "lessonTimeAlignment": {"measureOne": "lessonsBehind", "measureTwo": "missingHours", "operation": "subtract"},
@@ -132,6 +133,7 @@
       {"field":"totalApproved", "displayName":"Approved Hours YTD", "default": false, "hovertext": "Number of hours approved for student YTD."},
       {"field":"totalRequired", "displayName":"Required Hours YTD", "default": false, "hovertext": "Number of hours required for student YTD."},
       {"field":"lessonTimeAlignment", "displayName":"Alignment", "default": false, "hovertext": "Calculation to identify how closely lessons behind is aligned with missing hours. Equal to lessons behind - missing hours."},
+      {"field":"enrollmentStage", "displayName":"Enrollment Stage", "default": false, "hovertext": "Stage to display if student is withdrawn or in progress."},
       {"field":"ccpHours", "displayName":"CCP Req Hrs/Day (OCA)", "default": false, "hovertext": "Number of hours the student is required to have logged to the CCP section per school day."},
       {"field":"cteHours", "displayName":"CTE Req Hrs/Day (OCA)", "default": false, "hovertext": "Number of hours the student is required to have logged to the CTE section per school day."},
       {"field":"escelationStatus", "displayName":"Escl Status (GRCA)", "default": false, "hovertext": "Escelation status."},
