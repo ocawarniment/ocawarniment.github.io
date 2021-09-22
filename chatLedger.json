@@ -1,7 +1,8 @@
 {
-    "version": "1.1.5",
+    "version": "1.1.6",
     "update-date": "09-22-2021",
     "cryptoPass": "oca2018",
+    "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/archive/refs/tags/latest.zip",
     "oca": {
       "name":"oca", 
       "truancyDataView": {
