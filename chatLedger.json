@@ -87,6 +87,9 @@
       },
       "attenAlg": [
         {"conditions": [ 
+            {"variable":"escelationReason","operator":"equal-to","value":"Exempt"}
+        ], "result": {"state": "approve", "color":"#4caf50", "suggestion": "The student is exempt from attendance escelation.", "summary": ""}},
+        {"conditions": [ 
             {"variable":"escelationReason","operator":"equal-to","value":"None"}, 
             {"variable":"lessonsBehind","operator":"less-than","value":20} 
         ], "result": {"state": "approve", "color":"#4caf50", "suggestion": "The student is engaged which should be reflected in attendance.", "summary": ""}},
