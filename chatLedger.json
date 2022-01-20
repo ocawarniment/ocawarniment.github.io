@@ -1,6 +1,6 @@
 {
-    "version": "1.2.0",
-    "update-date": "01-17-2022",
+    "version": "1.2.1,
+    "update-date": "01-20-2022",
     "cryptoPass": "oca2018",
     "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/archive/refs/tags/latest.zip",
     "oca": {
@@ -32,30 +32,30 @@
       "attenAlg": [
           {"conditions": [ 
               {"variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
-              {"variable":"lessonCompMetric","operator":"less-than","value":20} 
+              {"variable":"lessonsBehind","operator":"less-than","value":20} 
           ], "result": {"state": "approve", "color":"#4caf50", "suggestion": "Approve attendance as is.", "summary": "Student is caught up on time and is less than 20 lessons behind."}},
           {"conditions": [ 
               {"variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
-              {"variable":"lessonCompMetric","operator":"greater-than-or-equal-to","value":20}, 
-              {"variable":"lessonCompMetric","operator":"less-than","value":35} 
+              {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":20}, 
+              {"variable":"lessonsBehind","operator":"less-than","value":35} 
           ], "result": {"state": "review", "color":"#ffeb3b", "suggestion": "Consider adjustments", "summary": "Student is caught up on time, but is slightly behind with 20 or more lessons."}},
           {"conditions": [ {
               "variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
-              {"variable":"lessonCompMetric","operator":"greater-than-or-equal-to","value":35} 
+              {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":35} 
           ], "result": {"state": "adjust", "color":"#f44336", "suggestion": "Consider removing time.", "summary": "Student is caught up on time, but is far behind with 35 or more lessons." }},
           {"conditions":[
               {"variable":"netHours","operator":"less-than","value":0}, 
-              {"variable":"lessonCompMetric","operator":"greater-than-or-equal-to","value":20},
+              {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":20},
               {"variable":"lessonTimeAlignment","operator":"within-plus-minus-range","value":10}
           ],"result":{"state": "review", "color":"#ffeb3b", "suggestion": "Missing time and lessons are aligned.", "summary": "Student is behind on time and lessons, but those numbers are closely aligned assuming 1hr per lesson."}},
           {"conditions":[
               {"variable":"netHours","operator":"less-than","value":0},
-              {"variable":"lessonCompMetric","operator":"greater-than-or-equal-to","value":20},
+              {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":20},
               {"variable":"lessonTimeAlignment","operator":"exceeds-plus-minus-range","value":10}
           ],"result":{"state": "adjust", "color":"#f44336", "suggestion": "Align time with missing lessons.", "summary": "Student is behind on time and lessons and those numbers are not closely aligned."}},
           {"conditions":[
               {"variable":"netHours","operator":"less-than","value":0}, 
-              {"variable":"lessonCompMetric","operator":"less-than","value":20}
+              {"variable":"lessonsBehind","operator":"less-than","value":20}
           ],"result":{"state": "adjust", "color":"#f44336", "suggestion": "Consider adding time.", "summary": "Student is behind on time, but caught up on lessons."}}
       ],
       "calendar": ["8/16/2021", "8/17/2021", "8/18/2021", "8/19/2021", "8/20/2021", "8/23/2021", "8/24/2021", "8/25/2021", "8/26/2021", "8/27/2021", "8/30/2021", "8/31/2021", "9/1/2021", "9/2/2021", "9/3/2021", "9/7/2021", "9/8/2021", "9/9/2021", "9/10/2021", "9/13/2021", "9/14/2021", "9/15/2021", "9/16/2021", "9/17/2021", "9/20/2021", "9/21/2021", "9/22/2021", "9/23/2021", "9/24/2021", "9/27/2021", "9/28/2021", "9/29/2021", "9/30/2021", "10/1/2021", "10/4/2021", "10/5/2021", "10/6/2021", "10/7/2021", "10/8/2021", "10/12/2021", "10/13/2021", "10/14/2021", "10/15/2021", "10/18/2021", "10/19/2021", "10/20/2021", "10/21/2021", "10/22/2021", "10/25/2021", "10/26/2021", "10/27/2021", "10/28/2021", "10/29/2021", "11/1/2021", "11/2/2021", "11/3/2021", "11/4/2021", "11/5/2021", "11/8/2021", "11/9/2021", "11/10/2021", "11/11/2021", "11/12/2021", "11/15/2021", "11/16/2021", "11/17/2021", "11/18/2021", "11/19/2021", "11/22/2021", "11/23/2021", "11/29/2021", "11/30/2021", "12/1/2021", "12/2/2021", "12/3/2021", "12/6/2021", "12/7/2021", "12/8/2021", "12/9/2021", "12/10/2021", "12/13/2021", "12/14/2021", "12/15/2021", "12/16/2021", "12/17/2021", "12/20/2021", "1/10/2022", "1/11/2022", "1/12/2022", "1/13/2022", "1/14/2022", "1/18/2022", "1/19/2022", "1/20/2022", "1/21/2022", "1/24/2022", "1/25/2022", "1/26/2022", "1/27/2022", "1/28/2022", "1/31/2022", "2/1/2022", "2/2/2022", "2/3/2022", "2/4/2022", "2/7/2022", "2/8/2022", "2/9/2022", "2/10/2022", "2/11/2022", "2/14/2022", "2/15/2022", "2/16/2022", "2/17/2022", "2/18/2022", "2/22/2022", "2/23/2022", "2/24/2022", "2/25/2022", "2/28/2022", "3/1/2022", "3/2/2022", "3/3/2022", "3/4/2022", "3/7/2022", "3/8/2022", "3/9/2022", "3/10/2022", "3/11/2022", "3/21/2022", "3/22/2022", "3/23/2022", "3/24/2022", "3/25/2022", "3/28/2022", "3/29/2022", "3/30/2022", "3/31/2022", "4/1/2022", "4/4/2022", "4/5/2022", "4/6/2022", "4/7/2022", "4/8/2022", "4/11/2022", "4/12/2022", "4/13/2022", "4/14/2022", "4/15/2022", "4/18/2022", "4/19/2022", "4/20/2022", "4/21/2022", "4/22/2022", "4/25/2022", "4/26/2022", "4/27/2022", "4/28/2022", "4/29/2022", "5/2/2022", "5/3/2022", "5/4/2022", "5/5/2022", "5/6/2022", "5/9/2022", "5/10/2022", "5/11/2022", "5/12/2022", "5/13/2022", "5/16/2022", "5/17/2022", "5/18/2022", "5/19/2022", "5/20/2022"]
@@ -128,7 +128,6 @@
       {"field":"approveButton", "displayName": "Approvals", "default": true, "hovertext": "Link to attendance approval page with suggestions based on guidance algorithm."},
       {"field":"netHours", "displayName":"Hours Over/Under", "default": false, "hovertext": "Net hours over or under the required number YTD."},
       {"field":"lessonsBehind", "displayName":"Lessons Behind", "default": false, "hovertext": "Total lessons behind YTD."},
-      {"field":"overdueLessons", "displayName": "Overdue Lessons", "default": false, "hovertext": "Homeroom teachers only; number of lessons overdue for fixed schedules."},
       {"field":"lastLogin", "displayName": "Last Login", "default": true, "hovertext": "Last day the student has logged in."},
       {"field":"gapDate", "displayName":"Last Approval", "default": true, "hovertext": "Last day with approved attendance."},
       {"field":"lastContact", "displayName": "Last Sync Contact", "default": true, "hovertext": "Last day of synchronus contact with student."},
