@@ -155,6 +155,7 @@
       {"field":"approveButton", "displayName": "Approvals", "default": true, "hovertext": "Link to attendance approval page with suggestions based on guidance algorithm."},
       {"field":"netHours", "displayName":"Hours Over/Under", "default": false, "hovertext": "Net hours over or under the required number YTD."},
       {"field":"lessonsBehind", "displayName":"Lessons Behind", "default": false, "hovertext": "Total lessons behind YTD."},
+      {"field":"overdueLessons", "displayName": "Overdue Lessons", "default": false, "hovertext": "Homeroom teachers only; number of lessons overdue for fixed schedules."},
       {"field":"lastLogin", "displayName": "Last Login", "default": true, "hovertext": "Last day the student has logged in."},
       {"field":"gapDate", "displayName":"Last Approval", "default": true, "hovertext": "Last day with approved attendance."},
       {"field":"lastContact", "displayName": "Last Sync Contact", "default": true, "hovertext": "Last day of synchronus contact with student."},
