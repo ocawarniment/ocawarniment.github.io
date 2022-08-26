@@ -1,12 +1,12 @@
 {
-    "version": "1.4.2",
+    "version": "1.4.3",
     "update-date": "08-25-2022",
     "cryptoPass": "oca2018",
     "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/archive/refs/tags/1.4.0.zip",
     "oca": {
       "name":"oca", 
       "truancyDataView": {
-        "id": "15492",
+        "id": "16870",
         "measures": {
             "lastLogin": {"name":"Last Login", "domSelector":"#EF_LastLogin"},
             "lastContact": {"name":"Last Contact", "domSelector":"#EF_StudentLastSynchronousContact"},
