@@ -96,14 +96,14 @@
     "grca": {
       "name":"grca", 
       "truancyDataView": {
-        "id": "17653",
+        "id": "18651",
         "measures": {
             "lastLogin": {"name":"Last Login", "domSelector":"#EF_LastLogin"},
             "lastContact": {"name":"Last Contact", "domSelector":"#EF_StudentLastSynchronousContact"},
-            "missingHours": {"name":"Hours Missed Year to Date", "domSelector":"#OHTru2324_HrsMissedYTD", "defaultValue":0, "type": "number"},
+            "missingHours": {"name":"Hours Missed Year to Date", "domSelector":"#OHTru2425_HrsMissedYTD", "defaultValue":0, "type": "number"},
             "gapDate": {"name":"Last Day with Approved Attendance", "domSelector":"#GRCA_LastDayWUnapprovedAttend"},
-            "totalApproved": {"name":"Actual Attendance Hours", "domSelector":"#OHTru2324_ActualAttHrs"},
-            "totalRequired": {"name":"Required Attendance Hours", "domSelector": "#OHTru2324_ReqInstrucHrs"},
+            "totalApproved": {"name":"Actual Attendance Hours", "domSelector":"#OHTru2425_ActualAttHrs"},
+            "totalRequired": {"name":"Required Attendance Hours", "domSelector": "#OHTru2425_ReqInstrucHrs"},
             "lessonsBehind": {"name":"Lessons Behind", "domSelector":"#EF_NumberLessonsBehind", "defaultValue":0},
             "attendanceMetric": {"name":"Attendance Metric", "domSelector":"#EF_AttendanceMetric"},
             "firstDay": {"name":"Enrollment Date", "domSelector":"#EF_EnrollmentDate"},
@@ -111,7 +111,7 @@
             "escelationStatus": {"name":"Esc. Status", "domSelector":"#EF_AttendanceStatusAutomated"},
             "escelationReason": {"name": "Esc. Reason", "domSelector":"#EF_WhyEscalated", "defaultValue": "None"},
             "enrollmentStage": {"name": "Enrollment Stage", "domSelector":"#EF_StudentStageAutomated"},
-            "stateReportingDate": {"name": "State Reporting Date", "domSelector": "#EF_STReportingEnrollmentDate2324"}
+            "stateReportingDate": {"name": "State Reporting Date", "domSelector": "#EF_STReportingEnrollmentDate2425"}
         },
         "metrics": {
             "lessonTimeAlignment": {"measureOne": "lessonsBehind", "measureTwo": "missingHours", "operation": "subtract"},
