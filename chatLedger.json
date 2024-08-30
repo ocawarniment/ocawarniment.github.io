@@ -17,8 +17,8 @@
             "lessonsBehind": {"name":"Lessons Behind", "domSelector":"#EF_NumberLessonsBehind", "defaultValue":0, "type": "number"},
             "attendanceMetric": {"name":"Attendance Metric", "domSelector":"#EF_AttendanceMetric", "type": "number"},
             "firstDay": {"name":"Enrollment Date", "domSelector":"#EF_EnrollmentDate"},
-            "cteHours": {"name": "CTE Hours Per Day", "domSelector":"#OCA_Truancy2425_CTECATHrsDay", "type": "number"},
-            "ccpHours": {"name": "CCP Hours Per Day", "domSelector":"#OCA_Truancy2425_CCPCATHrsDay", "type": "number"},
+            "cteHours": {"name": "CTE Hours Per Day", "domSelector":"#Ohio_Truancy2425_CTECATHrsDay", "type": "number"},
+            "ccpHours": {"name": "CCP Hours Per Day", "domSelector":"#Ohio_Truancy2425_CCPCATHrsDay", "type": "number"},
             "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"},
             "enrollmentStage": {"name": "Enrollment Stage", "domSelector":"#EF_StudentStageAutomated"},
             "stateReportingDate": {"name": "State Reporting Date", "domSelector": "#EF_STReportingEnrollmentDate2425"}
