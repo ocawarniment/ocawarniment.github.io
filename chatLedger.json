@@ -1,6 +1,6 @@
 {
-    "version": "1.8.4",
-    "update-date": "01-22-2025",
+    "version": "1.9.0",
+    "update-date": "008-21-2025",
     "cryptoPass": "oca2018",
     "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/archive/refs/tags/2.0.0.zip",
     "oca": {
@@ -96,14 +96,14 @@
     "grca": {
       "name":"grca", 
       "truancyDataView": {
-        "id": "18651",
+        "id": "19437",
         "measures": {
             "lastLogin": {"name":"Last Login", "domSelector":"#EF_LastLogin"},
             "lastContact": {"name":"Last Contact", "domSelector":"#EF_StudentLastSynchronousContact"},
-            "missingHours": {"name":"Hours Missed Year to Date", "domSelector":"#OHTru2425_HrsMissedYTD", "defaultValue":0, "type": "number"},
+            "missingHours": {"name":"Hours Missed Year to Date", "domSelector":"#OHTru2526_HrsMissedYTD", "defaultValue":0, "type": "number"},
             "gapDate": {"name":"Last Day with Approved Attendance", "domSelector":"#GRCA_LastDayWUnapprovedAttend"},
-            "totalApproved": {"name":"Actual Attendance Hours", "domSelector":"#OHTru2425_ActualAttHrs"},
-            "totalRequired": {"name":"Required Attendance Hours", "domSelector": "#OHTru2425_ReqInstrucHrs"},
+            "totalApproved": {"name":"Actual Attendance Hours", "domSelector":"#OHTru2526_ActualAttHrs"},
+            "totalRequired": {"name":"Required Attendance Hours", "domSelector": "#OHTru2526_ReqInstrucHrs"},
             "lessonsBehind": {"name":"Lessons Behind", "domSelector":"#EF_NumberLessonsBehind", "defaultValue":0},
             "attendanceMetric": {"name":"Attendance Metric", "domSelector":"#EF_AttendanceMetric"},
             "firstDay": {"name":"Enrollment Date", "domSelector":"#EF_EnrollmentDate"},
@@ -111,7 +111,7 @@
             "escelationStatus": {"name":"Esc. Status", "domSelector":"#EF_AttendanceStatusAutomated"},
             "escelationReason": {"name": "Esc. Reason", "domSelector":"#EF_WhyEscalated", "defaultValue": "None"},
             "enrollmentStage": {"name": "Enrollment Stage", "domSelector":"#EF_StudentStageAutomated"},
-            "stateReportingDate": {"name": "State Reporting Date", "domSelector": "#EF_STReportingEnrollmentDate2425"}
+            "stateReportingDate": {"name": "State Reporting Date", "domSelector": "#EF_STReportingEnrollmentDate2526"}
         },
         "metrics": {
             "lessonTimeAlignment": {"measureOne": "lessonsBehind", "measureTwo": "missingHours", "operation": "subtract"},
