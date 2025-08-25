@@ -1,5 +1,5 @@
 {
-    "version": "1.9.2",
+    "version": "1.9.3",
     "update-date": "08-25-2025",
     "cryptoPass": "oca2018",
     "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/archive/refs/tags/2.0.0.zip",
@@ -32,57 +32,57 @@
             {"conditions": [ 
                 {"variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
                 {"variable":"lessonCompMetric","operator":"less-than","value":20} 
-            ], "result": {"state": "approve", "color":"#81c784", "suggestion": "Approve attendance as is.", "summary": "Student is caught up on time and is less than 20 lessons behind."}},
+            ], "result": {"state": "approve", "color":"success", "suggestion": "Approve attendance as is.", "summary": "Student is caught up on time and is less than 20 lessons behind."}},
             {"conditions": [ 
                 {"variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
                 {"variable":"lessonCompMetric","operator":"greater-than-or-equal-to","value":20}, 
                 {"variable":"lessonCompMetric","operator":"less-than","value":35} 
-            ], "result": {"state": "review", "color":"#ffd54f", "suggestion": "Consider adjustments", "summary": "Student is caught up on time, but is slightly behind with 20 or more lessons."}},
+            ], "result": {"state": "review", "color":"warning", "suggestion": "Consider adjustments", "summary": "Student is caught up on time, but is slightly behind with 20 or more lessons."}},
             {"conditions": [ {
                 "variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
                 {"variable":"lessonCompMetric","operator":"greater-than-or-equal-to","value":35} 
-            ], "result": {"state": "adjust", "color":"#e57373", "suggestion": "Consider removing time.", "summary": "Student is caught up on time, but is far behind with 35 or more lessons." }},
+            ], "result": {"state": "adjust", "color":"error", "suggestion": "Consider removing time.", "summary": "Student is caught up on time, but is far behind with 35 or more lessons." }},
             {"conditions":[
                 {"variable":"netHours","operator":"less-than","value":0}, 
                 {"variable":"lessonCompMetric","operator":"greater-than-or-equal-to","value":20},
                 {"variable":"lessonTimeAlignment","operator":"within-plus-minus-range","value":10}
-            ],"result":{"state": "review", "color":"#ffd54f", "suggestion": "Missing time and lessons are aligned.", "summary": "Student is behind on time and lessons, but those numbers are closely aligned assuming 1hr per lesson."}},
+            ],"result":{"state": "review", "color":"warning", "suggestion": "Missing time and lessons are aligned.", "summary": "Student is behind on time and lessons, but those numbers are closely aligned assuming 1hr per lesson."}},
             {"conditions":[
                 {"variable":"netHours","operator":"less-than","value":0},
                 {"variable":"lessonCompMetric","operator":"greater-than-or-equal-to","value":20},
                 {"variable":"lessonTimeAlignment","operator":"exceeds-plus-minus-range","value":10}
-            ],"result":{"state": "adjust", "color":"#e57373", "suggestion": "Align time with missing lessons.", "summary": "Student is behind on time and lessons and those numbers are not closely aligned."}},
+            ],"result":{"state": "adjust", "color":"error", "suggestion": "Align time with missing lessons.", "summary": "Student is behind on time and lessons and those numbers are not closely aligned."}},
             {"conditions":[
                 {"variable":"netHours","operator":"less-than","value":0}, 
                 {"variable":"lessonCompMetric","operator":"less-than","value":20}
-            ],"result":{"state": "adjust", "color":"#e57373", "suggestion": "Consider adding time.", "summary": "Student is behind on time, but caught up on lessons."}},
+            ],"result":{"state": "adjust", "color":"error", "suggestion": "Consider adding time.", "summary": "Student is behind on time, but caught up on lessons."}},
             {"conditions": [ 
                 {"variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
                 {"variable":"lessonsBehind","operator":"less-than","value":20} 
-            ], "result": {"state": "approve", "color":"#81c784", "suggestion": "Approve attendance as is.", "summary": "Student is caught up on time and is less than 20 lessons behind."}},
+            ], "result": {"state": "approve", "color":"success", "suggestion": "Approve attendance as is.", "summary": "Student is caught up on time and is less than 20 lessons behind."}},
             {"conditions": [ 
                 {"variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
                 {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":20}, 
                 {"variable":"lessonsBehind","operator":"less-than","value":35} 
-            ], "result": {"state": "review", "color":"#ffd54f", "suggestion": "Consider adjustments", "summary": "Student is caught up on time, but is slightly behind with 20 or more lessons."}},
+            ], "result": {"state": "review", "color":"warning", "suggestion": "Consider adjustments", "summary": "Student is caught up on time, but is slightly behind with 20 or more lessons."}},
             {"conditions": [ {
                 "variable":"netHours","operator":"greater-than-or-equal-to","value":0}, 
                 {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":35} 
-            ], "result": {"state": "adjust", "color":"#e57373", "suggestion": "Consider removing time.", "summary": "Student is caught up on time, but is far behind with 35 or more lessons." }},
+            ], "result": {"state": "adjust", "color":"error", "suggestion": "Consider removing time.", "summary": "Student is caught up on time, but is far behind with 35 or more lessons." }},
             {"conditions":[
                 {"variable":"netHours","operator":"less-than","value":0}, 
                 {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":20},
                 {"variable":"lessonTimeAlignment","operator":"within-plus-minus-range","value":10}
-            ],"result":{"state": "review", "color":"#ffd54f", "suggestion": "Missing time and lessons are aligned.", "summary": "Student is behind on time and lessons, but those numbers are closely aligned assuming 1hr per lesson."}},
+            ],"result":{"state": "review", "color":"warning", "suggestion": "Missing time and lessons are aligned.", "summary": "Student is behind on time and lessons, but those numbers are closely aligned assuming 1hr per lesson."}},
             {"conditions":[
                 {"variable":"netHours","operator":"less-than","value":0},
                 {"variable":"lessonsBehind","operator":"greater-than-or-equal-to","value":20},
                 {"variable":"lessonTimeAlignment","operator":"exceeds-plus-minus-range","value":10}
-            ],"result":{"state": "adjust", "color":"#e57373", "suggestion": "Align time with missing lessons.", "summary": "Student is behind on time and lessons and those numbers are not closely aligned."}},
+            ],"result":{"state": "adjust", "color":"error", "suggestion": "Align time with missing lessons.", "summary": "Student is behind on time and lessons and those numbers are not closely aligned."}},
             {"conditions":[
                 {"variable":"netHours","operator":"less-than","value":0}, 
                 {"variable":"lessonsBehind","operator":"less-than","value":20}
-            ],"result":{"state": "adjust", "color":"#e57373", "suggestion": "Consider adding time.", "summary": "Student is behind on time, but caught up on lessons."}}
+            ],"result":{"state": "adjust", "color":"error", "suggestion": "Consider adding time.", "summary": "Student is behind on time, but caught up on lessons."}}
       ],
       "calendar": ["8/19/2024", "8/20/2024", "8/21/2024", "8/22/2024", "8/23/2024", "8/26/2024", "8/27/2024", "8/28/2024", "8/29/2024", "8/30/2024", "9/3/2024", "9/4/2024", "9/5/2024", "9/6/2024", "9/9/2024", "9/10/2024", "9/11/2024", "9/12/2024", "9/13/2024", "9/16/2024", "9/17/2024", "9/18/2024", "9/19/2024", "9/20/2024", "9/23/2024", "9/24/2024", "9/25/2024", "9/26/2024", "9/27/2024", "9/30/2024", "10/1/2024", "10/2/2024", "10/3/2024", "10/4/2024", "10/7/2024", "10/8/2024", "10/9/2024", "10/10/2024", "10/11/2024", "10/15/2024", "10/16/2024", "10/17/2024", "10/18/2024", "10/21/2024", "10/22/2024", "10/23/2024", "10/24/2024", "10/25/2024", "10/28/2024", "10/29/2024", "10/30/2024", "10/31/2024", "11/1/2024", "11/4/2024", "11/5/2024", "11/6/2024", "11/7/2024", "11/8/2024", "11/11/2024", "11/12/2024", "11/13/2024", "11/14/2024", "11/15/2024", "11/18/2024", "11/19/2024", "11/20/2024", "11/21/2024", "11/22/2024", "11/25/2024", "11/26/2024", "12/2/2024", "12/3/2024", "12/4/2024", "12/5/2024", "12/6/2024", "12/9/2024", "12/10/2024", "12/11/2024", "12/12/2024", "12/13/2024", "12/16/2024", "12/17/2024", "12/18/2024", "12/19/2024", "12/20/2024", "1/9/2025", "1/10/2025", "1/13/2025", "1/14/2025", "1/15/2025", "1/16/2025", "1/17/2025", "1/21/2025", "1/22/2025", "1/23/2025", "1/24/2025", "1/27/2025", "1/28/2025", "1/29/2025", "1/30/2025", "1/31/2025", "2/3/2025", "2/4/2025", "2/5/2025", "2/6/2025", "2/7/2025", "2/10/2025", "2/11/2025", "2/12/2025", "2/13/2025", "2/14/2025", "2/18/2025", "2/19/2025", "2/20/2025", "2/21/2025", "2/24/2025", "2/25/2025", "2/26/2025", "2/27/2025", "2/28/2025", "3/3/2025", "3/4/2025", "3/5/2025", "3/6/2025", "3/7/2025", "3/10/2025", "3/11/2025", "3/12/2025", "3/13/2025", "3/14/2025", "3/17/2025", "3/18/2025", "3/19/2025", "3/20/2025", "3/31/2025", "4/1/2025", "4/2/2025", "4/3/2025", "4/4/2025", "4/7/2025", "4/8/2025", "4/9/2025", "4/10/2025", "4/11/2025", "4/14/2025", "4/15/2025", "4/16/2025", "4/17/2025", "4/21/2025", "4/22/2025", "4/23/2025", "4/24/2025", "4/25/2025", "4/28/2025", "4/29/2025", "4/30/2025", "5/1/2025", "5/2/2025", "5/5/2025", "5/6/2025", "5/7/2025", "5/8/2025", "5/9/2025", "5/12/2025", "5/13/2025", "5/14/2025", "5/15/2025", "5/16/2025", "5/19/2025", "5/20/2025", "5/21/2025", "5/22/2025"],
       "myStudentsPage": {
