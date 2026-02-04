@@ -1,6 +1,6 @@
 {
-    "version": "2.0.5",
-    "update-date": "09-04-2025",
+    "version": "2.0.6",
+    "update-date": "02-04-2026",
     "cryptoPass": "oca2018",
     "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/archive/refs/heads/master.zip",
     "oca": {
@@ -17,8 +17,8 @@
             "lessonsBehind": {"name":"Lessons Behind", "domSelector":"#EF_NumberLessonsBehind", "defaultValue":0, "type": "number"},
             "attendanceMetric": {"name":"Attendance Metric", "domSelector":"#EF_AttendanceMetric", "type": "number"},
             "firstDay": {"name":"Enrollment Date", "domSelector":"#EF_EnrollmentDate"},
-            "cteHours": {"name": "CTE Hours Per Day", "domSelector":"#Ohio_Truancy2526_CTECATHrsDay", "type": "number"},
-            "ccpHours": {"name": "CCP Hours Per Day", "domSelector":"#Ohio_Truancy2526_CCPCATHrsDay", "type": "number"},
+            "cteHours": {"name": "CTE Hours Per Day", "domSelector":"#OCA_Truancy2526_CTECATHrsDay", "type": "number"},
+            "ccpHours": {"name": "CCP Hours Per Day", "domSelector":"#OCA_Truancy2526_CCPCATHrsDay", "type": "number"},
             "stateId": {"name": "Student State ID", "domSelector":"#Student_ID"},
             "enrollmentStage": {"name": "Enrollment Stage", "domSelector":"#EF_StudentStageAutomated"},
             "stateReportingDate": {"name": "State Reporting Date", "domSelector": "#EF_STReportingEnrollmentDate2526"}
