@@ -1,5 +1,5 @@
 {
-  "version": "2.0.14",
+  "version": "2.0.15",
   "update-date": "08-31-2026",
   "cryptoPass": "oca2018",
   "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/releases/latest/download/CHAT.zip",
@@ -144,7 +144,6 @@
         "attendanceMetric": { "name": "Attendance Metric", "domSelector": "#EF_AttendanceMetric" },
         "firstDay": { "name": "Enrollment Date", "domSelector": "#EF_EnrollmentDate" },
         "stateId": { "name": "Student State ID", "domSelector": "#Student_ID" },
-        "escelationStatus": { "name": "Esc. Status", "domSelector": "#EF_AttendanceStatusAutomated" },
         "escelationReason": { "name": "Esc. Reason", "domSelector": "#EF_WhyEscalated", "defaultValue": "None" },
         "enrollmentStage": { "name": "Enrollment Stage", "domSelector": "#EF_StudentStageAutomated" },
         "stateReportingDate": { "name": "State Reporting Date", "domSelector": "#EF_STReportingEnrollmentDate2627" }
@@ -250,7 +249,6 @@
         "attendanceMetric": { "name": "Attendance Metric", "domSelector": "#EF_AttendanceMetric" },
         "firstDay": { "name": "Enrollment Date", "domSelector": "#EF_EnrollmentDate" },
         "stateId": { "name": "Student State ID", "domSelector": "#Student_ID" },
-        "escelationStatus": { "name": "Esc. Status", "domSelector": "#EF_AttendanceStatusAutomated" },
         "escelationReason": { "name": "Esc. Reason", "domSelector": "#EF_WhyEscalated", "defaultValue": "None" },
         "enrollmentStage": { "name": "Enrollment Stage", "domSelector": "#EF_StudentStageAutomated" },
         "stateReportingDate": { "name": "State Reporting Date", "domSelector": "#EF_STReportingEnrollmentDate2627" }
