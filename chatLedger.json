@@ -1,8 +1,8 @@
 {
-  "version": "2.0.12",
-  "update-date": "08-23-2026",
+  "version": "2.0.14",
+  "update-date": "08-31-2026",
   "cryptoPass": "oca2018",
-  "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/archive/refs/heads/master.zip",
+  "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/releases/latest/download/CHAT.zip",
   "oca": {
     "name": "oca",
     "truancyDataView": {
@@ -157,6 +157,19 @@
     "attenAlg": [
       {
         "conditions": [
+          { "variable": "escelationReason", "operator": "contains", "value": "(Alarm)" }
+        ],
+        "result": { "state": "adjust", "color": "error", "suggestion": "The student is disengaged; immediate teacher action is required and attendance adjustments may be needed. The student should be escalated.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "netHours", "operator": "less-than", "value": 0 },
+          { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
+        ],
+        "result": { "state": "adjust", "color": "error", "suggestion": "Consider adding approved time. The student is keeping up with lessons despite having logged fewer hours than required; this is an engagement concern, not an attendance concern.", "summary": "" }
+      },
+      {
+        "conditions": [
           { "variable": "escelationReason", "operator": "equal-to", "value": "Exempt" }
         ],
         "result": { "state": "approve", "color": "success", "suggestion": "The student is exempt from attendance escelation.", "summary": "" }
@@ -166,14 +179,14 @@
           { "variable": "escelationReason", "operator": "equal-to", "value": "None" },
           { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
         ],
-        "result": { "state": "approve", "color": "success", "suggestion": "The student is engaged which should be reflected in attendance.", "summary": "" }
+        "result": { "state": "approve", "color": "success", "suggestion": "The student is engaged; full weekly attendance should be approved.", "summary": "" }
       },
       {
         "conditions": [
           { "variable": "escelationReason", "operator": "equal-to", "value": "Contacts (AA)," },
           { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
         ],
-        "result": { "state": "approve", "color": "success", "suggestion": "The student is engaged which should be reflected in attendance.", "summary": "" }
+        "result": { "state": "approve", "color": "success", "suggestion": "The student is engaged; full weekly attendance should be approved.", "summary": "" }
       },
       {
         "conditions": [
@@ -181,14 +194,14 @@
           { "variable": "lessonsBehind", "operator": "greater-than-or-equal-to", "value": 20 },
           { "variable": "lessonsBehind", "operator": "less-than", "value": 40 }
         ],
-        "result": { "state": "review", "color": "warning", "suggestion": "Teacher review is required to determine engagement and ensure attendance aligns appropriately.", "summary": "" }
+        "result": { "state": "review", "color": "warning", "suggestion": "Teacher review is required to verify student engagement and support the family in getting back on track. Slight attendance adjustments may be needed.", "summary": "" }
       },
       {
         "conditions": [
           { "variable": "escelationReason", "operator": "contains", "value": "(AA)" },
           { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
         ],
-        "result": { "state": "review", "color": "warning", "suggestion": "The student was previously at risk of low engagement. Monitor closely over the coming weeks.", "summary": "" }
+        "result": { "state": "review", "color": "warning", "suggestion": "Review and monitor closely over the coming weeks due to past low-engagement risks. Full weekly attendance should be approved.", "summary": "" }
       },
       {
         "conditions": [
@@ -196,25 +209,19 @@
           { "variable": "lessonsBehind", "operator": "greater-than-or-equal-to", "value": 20 },
           { "variable": "lessonsBehind", "operator": "less-than", "value": 40 }
         ],
-        "result": { "state": "review", "color": "warning", "suggestion": "Teacher review is required to determine engagement and ensure attendance aligns appropriately.", "summary": "" }
+        "result": { "state": "review", "color": "warning", "suggestion": "Teacher review is required to evaluate engagement and ensure attendance aligns with progress.", "summary": "" }
       },
       {
         "conditions": [
           { "variable": "escelationReason", "operator": "contains", "value": "(AA)" },
           { "variable": "lessonsBehind", "operator": "greater-than-or-equal-to", "value": 40 }
         ],
-        "result": { "state": "adjust", "color": "error", "suggestion": "The student is not engaged and attendance should be adjusted appropriately.", "summary": "" }
+        "result": { "state": "adjust", "color": "error", "suggestion": "The student is disengaged; adjust and approve attendance appropriately.", "summary": "" }
       },
       {
         "conditions": [
           { "variable": "escelationReason", "operator": "equal-to", "value": "None" },
           { "variable": "lessonsBehind", "operator": "greater-than-or-equal-to", "value": 40 }
-        ],
-        "result": { "state": "adjust", "color": "error", "suggestion": "The student is not engaged and attendance should be adjusted appropriately.", "summary": "" }
-      },
-      {
-        "conditions": [
-          { "variable": "escelationReason", "operator": "contains", "value": "(Alarm)" }
         ],
         "result": { "state": "adjust", "color": "error", "suggestion": "The student is not engaged and attendance should be adjusted appropriately.", "summary": "" }
       }
@@ -229,7 +236,102 @@
   },
 
   "ohbca": {
-    "copyFrom": "grca",
+    "name": "ohbca",
+    "truancyDataView": {
+      "id": "20020",
+      "measures": {
+        "lastLogin": { "name": "Last Login", "domSelector": "#EF_LastLogin" },
+        "lastContact": { "name": "Last Contact", "domSelector": "#EF_StudentLastSynchronousContact" },
+        "missingHours": { "name": "Hours Missed Year to Date", "domSelector": "#OHTru2627_HrsMissedYTD", "defaultValue": 0, "type": "number" },
+        "gapDate": { "name": "Last Day with Approved Attendance", "domSelector": "#GRCA_LastDayWUnapprovedAttend" },
+        "totalApproved": { "name": "Actual Attendance Hours", "domSelector": "#OHTru2627_ActualAttHrs" },
+        "totalRequired": { "name": "Required Attendance Hours", "domSelector": "#OHTru2627_ReqInstrucHrs" },
+        "lessonsBehind": { "name": "Lessons Behind", "domSelector": "#EF_NumberLessonsBehind", "defaultValue": 0 },
+        "attendanceMetric": { "name": "Attendance Metric", "domSelector": "#EF_AttendanceMetric" },
+        "firstDay": { "name": "Enrollment Date", "domSelector": "#EF_EnrollmentDate" },
+        "stateId": { "name": "Student State ID", "domSelector": "#Student_ID" },
+        "escelationStatus": { "name": "Esc. Status", "domSelector": "#EF_AttendanceStatusAutomated" },
+        "escelationReason": { "name": "Esc. Reason", "domSelector": "#EF_WhyEscalated", "defaultValue": "None" },
+        "enrollmentStage": { "name": "Enrollment Stage", "domSelector": "#EF_StudentStageAutomated" },
+        "stateReportingDate": { "name": "State Reporting Date", "domSelector": "#EF_STReportingEnrollmentDate2627" }
+      },
+      "metrics": {
+        "lessonTimeAlignment": { "measureOne": "lessonsBehind", "measureTwo": "missingHours", "operation": "subtract" },
+        "netHours": { "measureOne": "totalApproved", "measureTwo": "totalRequired", "operation": "subtract" }
+      }
+    },
+    "attenAlg": [
+      {
+        "conditions": [
+          { "variable": "escelationReason", "operator": "contains", "value": "(Alarm)" }
+        ],
+        "result": { "state": "adjust", "color": "error", "suggestion": "The student is disengaged; immediate teacher action is required and attendance adjustments may be needed. The student should be escalated.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "netHours", "operator": "less-than", "value": 0 },
+          { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
+        ],
+        "result": { "state": "adjust", "color": "error", "suggestion": "Consider adding approved time. The student is keeping up with lessons despite having logged fewer hours than required; this is an engagement concern, not an attendance concern.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "escelationReason", "operator": "equal-to", "value": "Exempt" }
+        ],
+        "result": { "state": "approve", "color": "success", "suggestion": "The student is exempt from attendance escelation.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "escelationReason", "operator": "equal-to", "value": "None" },
+          { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
+        ],
+        "result": { "state": "approve", "color": "success", "suggestion": "The student is engaged; full weekly attendance should be approved.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "escelationReason", "operator": "equal-to", "value": "Contacts (AA)," },
+          { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
+        ],
+        "result": { "state": "approve", "color": "success", "suggestion": "The student is engaged; full weekly attendance should be approved.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "escelationReason", "operator": "equal-to", "value": "None" },
+          { "variable": "lessonsBehind", "operator": "greater-than-or-equal-to", "value": 20 },
+          { "variable": "lessonsBehind", "operator": "less-than", "value": 40 }
+        ],
+        "result": { "state": "review", "color": "warning", "suggestion": "Teacher review is required to verify student engagement and support the family in getting back on track. Slight attendance adjustments may be needed.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "escelationReason", "operator": "contains", "value": "(AA)" },
+          { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
+        ],
+        "result": { "state": "review", "color": "warning", "suggestion": "Review and monitor closely over the coming weeks due to past low-engagement risks. Full weekly attendance should be approved.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "escelationReason", "operator": "contains", "value": "(AA)" },
+          { "variable": "lessonsBehind", "operator": "greater-than-or-equal-to", "value": 20 },
+          { "variable": "lessonsBehind", "operator": "less-than", "value": 40 }
+        ],
+        "result": { "state": "review", "color": "warning", "suggestion": "Teacher review is required to evaluate engagement and ensure attendance aligns with progress.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "escelationReason", "operator": "contains", "value": "(AA)" },
+          { "variable": "lessonsBehind", "operator": "greater-than-or-equal-to", "value": 40 }
+        ],
+        "result": { "state": "adjust", "color": "error", "suggestion": "The student is disengaged; adjust and approve attendance appropriately.", "summary": "" }
+      },
+      {
+        "conditions": [
+          { "variable": "escelationReason", "operator": "equal-to", "value": "None" },
+          { "variable": "lessonsBehind", "operator": "greater-than-or-equal-to", "value": 40 }
+        ],
+        "result": { "state": "adjust", "color": "error", "suggestion": "The student is not engaged and attendance should be adjusted appropriately.", "summary": "" }
+      }
+    ],
     "calendar": [
       "8/27/2026", "8/28/2026", "8/31/2026", "9/1/2026", "9/2/2026", "9/3/2026", "9/4/2026", "9/8/2026", "9/9/2026", "9/10/2026", "9/11/2026", "9/14/2026", "9/15/2026", "9/16/2026", "9/17/2026", "9/18/2026", "9/21/2026", "9/22/2026", "9/23/2026", "9/24/2026", "9/25/2026", "9/28/2026", "9/29/2026", "9/30/2026", "10/1/2026", "10/2/2026", "10/5/2026", "10/6/2026", "10/7/2026", "10/8/2026", "10/9/2026", "10/13/2026", "10/14/2026", "10/15/2026", "10/16/2026", "10/19/2026", "10/20/2026", "10/21/2026", "10/22/2026", "10/23/2026", "10/26/2026", "10/27/2026", "10/28/2026", "10/29/2026", "10/30/2026",
       "11/2/2026", "11/3/2026", "11/4/2026", "11/5/2026", "11/6/2026", "11/9/2026", "11/10/2026", "11/11/2026", "11/12/2026", "11/13/2026", "11/16/2026", "11/17/2026", "11/18/2026", "11/19/2026", "11/20/2026", "11/23/2026", "11/24/2026", "11/30/2026", "12/1/2026", "12/2/2026", "12/3/2026", "12/4/2026", "12/7/2026", "12/8/2026", "12/9/2026", "12/10/2026", "12/11/2026", "12/14/2026", "12/15/2026", "12/16/2026", "12/17/2026", "12/18/2026",
@@ -237,7 +339,13 @@
       "3/1/2027", "3/2/2027", "3/3/2027", "3/4/2027", "3/5/2027", "3/8/2027", "3/9/2027", "3/10/2027", "3/11/2027", "3/12/2027", "3/15/2027", "3/16/2027", "3/17/2027", "3/18/2027", "3/19/2027", "3/22/2027", "3/23/2027", "3/24/2027", "3/25/2027", "3/26/2027",
       "4/5/2027", "4/6/2027", "4/7/2027", "4/8/2027", "4/9/2027", "4/12/2027", "4/13/2027", "4/14/2027", "4/15/2027", "4/16/2027", "4/19/2027", "4/20/2027", "4/21/2027", "4/22/2027", "4/23/2027", "4/26/2027", "4/27/2027", "4/28/2027", "4/29/2027", "4/30/2027",
       "5/4/2027", "5/5/2027", "5/6/2027", "5/7/2027", "5/10/2027", "5/11/2027", "5/12/2027", "5/13/2027", "5/14/2027", "5/17/2027", "5/18/2027", "5/19/2027", "5/20/2027", "5/21/2027", "5/24/2027", "5/25/2027", "5/26/2027"
-    ]
+    ],
+    "myStudentsPage": {
+      "measures": {
+        "studentId": { "header": "ID", "columnOffset": 1 },
+        "overdueLessons": { "header": "Total Overdue", "columnOffset": 1 }
+      }
+    }
   },
 
   "popupDisplay": [
