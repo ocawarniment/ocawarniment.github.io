@@ -1,6 +1,6 @@
 {
-  "version": "2.0.15",
-  "update-date": "08-31-2026",
+  "version": "2.0.16",
+  "update-date": "09-09-2026",
   "cryptoPass": "oca2018",
   "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/releases/latest/download/CHAT.zip",
   "oca": {
@@ -237,7 +237,7 @@
   "ohbca": {
     "name": "ohbca",
     "truancyDataView": {
-      "id": "20020",
+      "id": "20146",
       "measures": {
         "lastLogin": { "name": "Last Login", "domSelector": "#EF_LastLogin" },
         "lastContact": { "name": "Last Contact", "domSelector": "#EF_StudentLastSynchronousContact" },
