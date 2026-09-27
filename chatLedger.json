@@ -1,6 +1,6 @@
 {
-  "version": "2.0.16",
-  "update-date": "09-09-2026",
+  "version": "2.0.17",
+  "update-date": "09-27-2026",
   "cryptoPass": "oca2018",
   "extensionDownloadUrl": "https://github.com/ocawarniment/connexus-homeroom-attendance-tool/releases/latest/download/CHAT.zip",
   "oca": {
@@ -165,7 +165,7 @@
           { "variable": "netHours", "operator": "less-than", "value": 0 },
           { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
         ],
-        "result": { "state": "adjust", "color": "error", "suggestion": "Consider adding approved time. The student is keeping up with lessons despite having logged fewer hours than required; this is an engagement concern, not an attendance concern.", "summary": "" }
+        "result": { "state": "adjust", "color": "info", "suggestion": "Consider adding approved time. The student is keeping up with lessons despite having logged fewer hours than required; this is an engagement concern, not an attendance concern.", "summary": "" }
       },
       {
         "conditions": [
@@ -270,7 +270,7 @@
           { "variable": "netHours", "operator": "less-than", "value": 0 },
           { "variable": "lessonsBehind", "operator": "less-than", "value": 20 }
         ],
-        "result": { "state": "adjust", "color": "error", "suggestion": "Consider adding approved time. The student is keeping up with lessons despite having logged fewer hours than required; this is an engagement concern, not an attendance concern.", "summary": "" }
+        "result": { "state": "adjust", "color": "info", "suggestion": "Consider adding approved time. The student is keeping up with lessons despite having logged fewer hours than required; this is an engagement concern, not an attendance concern.", "summary": "" }
       },
       {
         "conditions": [
